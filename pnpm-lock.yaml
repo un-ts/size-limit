@@ -69,7 +69,7 @@ importers:
   packages/preset-node-lib:
     specifiers:
       '@size-limit/file': ^7.0.8
-      size-limit-node-esbuild: ^0.0.0
+      size-limit-node-esbuild: ^0.1.0
       tslib: ^2.4.0
     dependencies:
       '@size-limit/file': 7.0.8_size-limit@7.0.8
