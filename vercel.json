@@ -1,7 +1,7 @@
 {
   "version": 2,
   "alias": [
-    "mono-lib-boilerplate.vercel.app"
+    "size-limit.vercel.app"
   ],
   "github": {
     "silent": true

@@ -1,12 +1,11 @@
-# pkg
+# size-limit-preset-node-lib
 
-A simple package
+Size Limit preset for Node libraries
 
 ## TOC <!-- omit in toc -->
 
 - [Usage](#usage)
   - [Install](#install)
-  - [API](#api)
 - [Sponsors](#sponsors)
 - [Backers](#backers)
 - [Changelog](#changelog)
@@ -18,21 +17,13 @@ A simple package
 
 ```sh
 # pnpm
-pnpm add pkg
+pnpm add -D size-limit-preset-node-lib
 
 # yarn
-yarn add pkg
+yarn add -D size-limit-preset-node-lib
 
 # npm
-npm i pkg
-```
-
-### API
-
-```js
-import echo from 'pkg'
-
-echo()
+npm i -D size-limit-preset-node-lib
 ```
 
 ## Sponsors

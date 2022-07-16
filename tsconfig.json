@@ -1,14 +1,14 @@
 {
   "extends": "@1stg/tsconfig/lib",
   "compilerOptions": {
-    "noEmit": true,
-    "paths": {
-      "pkg": ["./packages/pkg/src"]
-    }
+    "noEmit": true
   },
   "references": [
     {
-      "path": "./packages/pkg"
+      "path": "./packages/node-esbuild"
+    },
+    {
+      "path": "./packages/preset-node-lib"
     }
   ]
 }

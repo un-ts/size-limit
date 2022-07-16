@@ -1,10 +1,10 @@
 {
-  "name": "pkg",
+  "name": "size-limit-node-esbuild",
   "version": "0.0.0",
   "type": "module",
-  "description": "A simple package",
-  "repository": "git+https://github.com/un-ts/mono-lib-boilerplate.git",
-  "homepage": "https://github.com/un-ts/mono-lib-boilerplate/blob/main/packages/pkg",
+  "description": "Node esbuild plugin for Size Limit",
+  "repository": "git+https://github.com/un-ts/size-limit.git",
+  "homepage": "https://github.com/un-ts/size-limit/blob/main/packages/node-esbuild",
   "author": "JounQin (https://www.1stG.me) <admin@1stg.me>",
   "donate": {
     "recipients": [
@@ -42,22 +42,24 @@
   "engines": {
     "node": "^12.20.0 || ^14.18.0 || >=16.0.0"
   },
-  "main": "./src/index.ts",
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.js",
+  "exports": {
+    "types": "./lib/index.d.ts",
+    "import": "./lib/index.js",
+    "require": "./lib/index.cjs"
+  },
+  "types": "./lib/index.d.ts",
   "files": [
-    "lib"
+    "lib",
+    "shim.d.ts"
   ],
   "dependencies": {
+    "@size-limit/esbuild": "^7.0.8",
+    "nanoid": "^3.2.0",
     "tslib": "^2.4.0"
   },
   "publishConfig": {
-    "access": "public",
-    "main": "./lib/index.cjs",
-    "module": "./lib/index.js",
-    "exports": {
-      "types": "./lib/index.d.ts",
-      "import": "./lib/index.js",
-      "require": "./lib/index.cjs"
-    },
-    "types": "./lib/index.d.ts"
+    "access": "public"
   }
 }

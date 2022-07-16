@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "un-ts/mono-lib-boilerplate"
+      "repo": "un-ts/size-limit"
     }
   ],
   "commit": false,

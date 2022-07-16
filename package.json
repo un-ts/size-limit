@@ -1,9 +1,9 @@
 {
-  "name": "mono-lib-boilerplate",
+  "name": "@unts/size-limit",
   "version": "0.0.0",
   "type": "module",
-  "description": "A simple mono library boilerplate",
-  "repository": "git+https://github.com/un-ts/mono-lib-boilerplate.git",
+  "description": "Incredible `size-limit` plugins, make `size-limit` greater",
+  "repository": "git+https://github.com/un-ts/size-limit.git",
   "author": "JounQin (https://www.1stG.me) <admin@1stg.me>",
   "license": "MIT",
   "private": true,
@@ -18,7 +18,6 @@
     "clean": "rimraf 'packages/**/{lib,*.tsbuildinfo}'",
     "codesanbox:install": "npx pnpm@7.5.1 i",
     "dev": "w -e docs --disableDotRule --publicPath /",
-    "jest": "node --experimental-vm-modules node_modules/.bin/jest",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache -f friendly",
     "lint:style": "stylelint . --cache",
@@ -28,7 +27,7 @@
     "prerelease": "pnpm build",
     "release": "changeset publish",
     "serve": "sirv dist -s",
-    "test": "jest",
+    "test": "size-limit",
     "typecov": "type-coverage",
     "vercel-build": "w -e docs -p --publicPath /",
     "version": "changeset version"
@@ -40,19 +39,19 @@
     "@changesets/cli": "^2.23.2",
     "@pkgr/webpack": "^3.1.2",
     "@pkgr/webpack-mdx": "^2.0.3",
-    "@types/jest": "^28.1.5",
+    "@types/nanoid": "^3.0.0",
     "@types/node": "^18.0.4",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@types/web": "^0.0.69",
     "github-markdown-css": "^5.1.0",
-    "pkg": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "sirv-cli": "^2.0.2",
-    "ts-jest": "^28.0.5",
-    "tsx": "^3.8.0",
+    "size-limit": "^7.0.8",
+    "size-limit-node-esbuild": "workspace:*",
+    "size-limit-preset-node-lib": "workspace:*",
     "type-coverage": "^2.22.0",
     "typescript": "^4.7.4"
   },
@@ -76,17 +75,9 @@
     "/pnpm-lock.yaml",
     "!/.*.cjs"
   ],
-  "jest": {
-    "preset": "ts-jest/presets/default-esm",
-    "collectCoverage": true,
-    "globals": {
-      "ts-jest": {
-        "useESM": true
-      }
-    },
-    "moduleNameMapper": {
-      "^(\\.{1,2}/.*)\\.js$": "$1",
-      "pkg": "<rootDir>/packages/pkg/src"
+  "pnpm": {
+    "patchedDependencies": {
+      "size-limit@7.0.8": "patches/size-limit@7.0.8.patch"
     }
   },
   "prettier": "@1stg/prettier-config",
@@ -100,6 +91,14 @@
       "@1stg"
     ]
   },
+  "size-limit": [
+    {
+      "path": "./packages/node-esbuild/lib/index.js"
+    },
+    {
+      "path": "./packages/preset-node-lib/lib/index.js"
+    }
+  ],
   "stylelint": {
     "extends": "@1stg/stylelint-config"
   },
