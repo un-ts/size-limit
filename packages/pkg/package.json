@@ -1,0 +1,63 @@
+{
+  "name": "pkg",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "A simple package",
+  "repository": "git+https://github.com/un-ts/mono-lib-boilerplate.git",
+  "homepage": "https://github.com/un-ts/mono-lib-boilerplate/blob/main/packages/pkg",
+  "author": "JounQin (https://www.1stG.me) <admin@1stg.me>",
+  "donate": {
+    "recipients": [
+      {
+        "name": "unts",
+        "platform": "opencollective",
+        "address": "https://opencollective.com/unts",
+        "weight": 60
+      },
+      {
+        "name": "rxts",
+        "platform": "opencollective",
+        "address": "https://opencollective.com/rxts",
+        "weight": 20
+      },
+      {
+        "name": "1stG",
+        "email": "i@1stg.me",
+        "weight": 20,
+        "platforms": [
+          {
+            "platform": "opencollective",
+            "address": "https://opencollective.com/1stG"
+          },
+          {
+            "platform": "patreon",
+            "address": "https://www.patreon.com/1stG"
+          }
+        ]
+      }
+    ]
+  },
+  "funding": "https://opencollective.com/unts",
+  "license": "MIT",
+  "engines": {
+    "node": "^12.20.0 || ^14.18.0 || >=16.0.0"
+  },
+  "main": "./src/index.ts",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "tslib": "^2.4.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "./lib/index.cjs",
+    "module": "./lib/index.js",
+    "exports": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    },
+    "types": "./lib/index.d.ts"
+  }
+}
