@@ -1,6 +1,6 @@
 {
   "name": "size-limit-preset-node-lib",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "description": "Size Limit preset for Node libraries",
   "repository": "git+https://github.com/un-ts/size-limit.git",
@@ -56,7 +56,7 @@
   ],
   "dependencies": {
     "@size-limit/file": "^7.0.8",
-    "size-limit-node-esbuild": "^0.0.0",
+    "size-limit-node-esbuild": "^0.1.0",
     "tslib": "^2.4.0"
   },
   "publishConfig": {
