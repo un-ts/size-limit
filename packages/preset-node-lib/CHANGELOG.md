@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.2.0
+
+### Minor Changes
+
+- [`2ec8889`](https://github.com/un-ts/size-limit/commit/2ec88891aa19ba5db21944207c53f1b19f31720f) Thanks [@JounQin](https://github.com/JounQin)! - feat!: upgrade to size-limit v8
+
+### Patch Changes
+
+- Updated dependencies [[`2ec8889`](https://github.com/un-ts/size-limit/commit/2ec88891aa19ba5db21944207c53f1b19f31720f)]:
+  - size-limit-node-esbuild@0.2.0
+
 ## 0.1.0
 
 ### Minor Changes
