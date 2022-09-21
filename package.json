@@ -16,7 +16,7 @@
     "build:r": "r -f cjs",
     "build:tsc": "tsc -b",
     "clean": "rimraf 'packages/**/{lib,*.tsbuildinfo}'",
-    "codesanbox:install": "npx pnpm@7.5.1 i",
+    "codesandbox:install": "npx pnpm@7.5.1 i",
     "dev": "w -e docs --disableDotRule --publicPath /",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache -f friendly",
@@ -33,27 +33,27 @@
     "version": "changeset version"
   },
   "devDependencies": {
-    "@1stg/app-config": "^6.1.2",
-    "@1stg/lib-config": "^8.1.1",
-    "@changesets/changelog-github": "^0.4.5",
-    "@changesets/cli": "^2.23.2",
-    "@pkgr/webpack": "^3.1.2",
-    "@pkgr/webpack-mdx": "^2.0.3",
+    "@1stg/app-config": "^7.3.0",
+    "@1stg/lib-config": "^10.3.0",
+    "@changesets/changelog-github": "^0.4.6",
+    "@changesets/cli": "^2.24.4",
+    "@pkgr/webpack": "^3.4.0",
+    "@pkgr/webpack-mdx": "^2.2.0",
     "@types/nanoid": "^3.0.0",
-    "@types/node": "^18.0.4",
-    "@types/react": "^18.0.15",
+    "@types/node": "^18.7.18",
+    "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
-    "@types/web": "^0.0.69",
+    "@types/web": "^0.0.73",
     "github-markdown-css": "^5.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
+    "react-router-dom": "^6.4.0",
     "sirv-cli": "^2.0.2",
-    "size-limit": "^7.0.8",
+    "size-limit": "^8.1.0",
     "size-limit-node-esbuild": "workspace:*",
     "size-limit-preset-node-lib": "workspace:*",
     "type-coverage": "^2.22.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.3"
   },
   "resolutions": {
     "prettier": "^2.7.1"
@@ -75,15 +75,10 @@
     "/pnpm-lock.yaml",
     "!/.*.cjs"
   ],
-  "pnpm": {
-    "patchedDependencies": {
-      "size-limit@7.0.8": "patches/size-limit@7.0.8.patch"
-    }
-  },
   "prettier": "@1stg/prettier-config",
   "remarkConfig": {
     "plugins": [
-      "@1stg/remark-config"
+      "@1stg/preset"
     ]
   },
   "renovate": {
@@ -93,10 +88,12 @@
   },
   "size-limit": [
     {
-      "path": "./packages/node-esbuild/lib/index.js"
+      "path": "./packages/node-esbuild/lib/index.js",
+      "limit": "500B"
     },
     {
-      "path": "./packages/preset-node-lib/lib/index.js"
+      "path": "./packages/preset-node-lib/lib/index.js",
+      "limit": "150B"
     }
   ],
   "stylelint": {
