@@ -1,6 +1,6 @@
 {
   "name": "size-limit-node-esbuild",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "Node esbuild plugin for Size Limit",
   "repository": "git+https://github.com/un-ts/size-limit.git",

@@ -62,7 +62,7 @@ importers:
   packages/preset-node-lib:
     specifiers:
       '@size-limit/file': ^8.1.0
-      size-limit-node-esbuild: ^0.1.0
+      size-limit-node-esbuild: ^0.2.0
       tslib: ^2.4.0
     dependencies:
       '@size-limit/file': 8.1.0_size-limit@8.1.0
@@ -5523,7 +5523,7 @@ packages:
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
   /concat-stream/2.0.0:
@@ -11199,7 +11199,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       hosted-git-info: 4.1.0
-      is-core-module: 2.9.0
+      is-core-module: 2.10.0
       semver: 7.3.7
       validate-npm-package-license: 3.0.4
     dev: true
