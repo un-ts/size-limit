@@ -15,7 +15,7 @@ importers:
       '@pkgr/webpack-mdx': ^2.2.0
       '@types/node': ^18.7.18
       '@types/react': ^18.0.25
-      '@types/react-dom': ^18.0.6
+      '@types/react-dom': ^18.0.9
       '@types/web': ^0.0.75
       github-markdown-css: ^5.1.0
       react: ^18.2.0
@@ -36,7 +36,7 @@ importers:
       '@pkgr/webpack-mdx': 2.2.0_o5sqfnx4wzjrr2lw3frbihmv64
       '@types/node': 18.7.18
       '@types/react': 18.0.25
-      '@types/react-dom': 18.0.6
+      '@types/react-dom': 18.0.9
       '@types/web': 0.0.75
       github-markdown-css: 5.1.0
       react: 18.2.0
@@ -3840,8 +3840,8 @@ packages:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
     dev: true
 
-  /@types/react-dom/18.0.6:
-    resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
+  /@types/react-dom/18.0.9:
+    resolution: {integrity: sha512-qnVvHxASt/H7i+XG1U1xMiY5t+IHcPGUK7TDMDzom08xa7e86eCeKOiLZezwCKVxJn6NEiiy2ekgX8aQssjIKg==}
     dependencies:
       '@types/react': 18.0.25
     dev: true
