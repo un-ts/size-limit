@@ -48,7 +48,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
     "sirv-cli": "^2.0.2",
-    "size-limit": "^8.1.0",
+    "size-limit": "^8.2.6",
     "size-limit-node-esbuild": "link:packages/node-esbuild",
     "size-limit-preset-node-lib": "link:packages/preset-node-lib",
     "type-coverage": "^2.22.0",
