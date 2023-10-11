@@ -51,7 +51,7 @@
     "size-limit": "^8.1.0",
     "size-limit-node-esbuild": "link:packages/node-esbuild",
     "size-limit-preset-node-lib": "link:packages/preset-node-lib",
-    "type-coverage": "^2.22.0",
+    "type-coverage": "^2.27.0",
     "typescript": "^4.8.3"
   },
   "resolutions": {

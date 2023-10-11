@@ -25,7 +25,7 @@ importers:
       size-limit: ^8.1.0
       size-limit-node-esbuild: link:packages/node-esbuild
       size-limit-preset-node-lib: link:packages/preset-node-lib
-      type-coverage: ^2.22.0
+      type-coverage: ^2.27.0
       typescript: ^4.8.3
     devDependencies:
       '@1stg/app-config': 7.3.0_qmzqik7u66a2ha6h2scv2mryxq
@@ -46,7 +46,7 @@ importers:
       size-limit: 8.1.0
       size-limit-node-esbuild: link:packages/node-esbuild
       size-limit-preset-node-lib: link:packages/preset-node-lib
-      type-coverage: 2.22.0_typescript@4.8.3
+      type-coverage: 2.27.0_typescript@4.8.3
       typescript: 4.8.3
 
   packages/node-esbuild:
@@ -7754,16 +7754,6 @@ packages:
     resolution: {integrity: sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==}
     dev: true
 
-  /fast-glob/3.2.11:
-    resolution: {integrity: sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==}
-    engines: {node: '>=8.6.0'}
-    dependencies:
-      '@nodelib/fs.stat': 2.0.5
-      '@nodelib/fs.walk': 1.2.8
-      glob-parent: 5.1.2
-      merge2: 1.4.1
-      micromatch: 4.0.5
-
   /fast-glob/3.2.12:
     resolution: {integrity: sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==}
     engines: {node: '>=8.6.0'}
@@ -7773,7 +7763,6 @@ packages:
       glob-parent: 5.1.2
       merge2: 1.4.1
       micromatch: 4.0.5
-    dev: true
 
   /fast-json-stable-stringify/2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
@@ -8370,7 +8359,7 @@ packages:
     dependencies:
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.2.11
+      fast-glob: 3.2.12
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 3.0.0
@@ -10990,6 +10979,13 @@ packages:
   /minimatch/5.1.0:
     resolution: {integrity: sha512-9TPBGGak4nHfGZsPBohm9AWg6NoT7QTCehS3BIJABslyZbzxfV78QM2Y6+i741OPZIafFAaiiEMh5OyIrJPgtg==}
     engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
+
+  /minimatch/9.0.3:
+    resolution: {integrity: sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==}
+    engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       brace-expansion: 2.0.1
     dev: true
@@ -15951,25 +15947,25 @@ packages:
       prelude-ls: 1.2.1
     dev: true
 
-  /type-coverage-core/2.22.0_typescript@4.8.3:
-    resolution: {integrity: sha512-j2wjwOTeKc/G6RUrgVsBYuDbum2GnJ/pCQ6/DlMvgs1QBXEqZxI9N6okUSFc14veQBzr01gG0cwmdyagKdf3Sg==}
+  /type-coverage-core/2.26.3_typescript@4.8.3:
+    resolution: {integrity: sha512-rzNdW/tClHJvsUiy787b/UX53bNh1Dn7A5KqZDQjkL3j7iKFv/KnTolxDBBgTPcK4Zn9Ab7WLrik7cXw2oZZqw==}
     peerDependencies:
-      typescript: 2 || 3 || 4
+      typescript: 2 || 3 || 4 || 5
     dependencies:
-      fast-glob: 3.2.11
-      minimatch: 5.1.0
+      fast-glob: 3.2.12
+      minimatch: 9.0.3
       normalize-path: 3.0.0
       tslib: 2.4.0
       tsutils: 3.21.0_typescript@4.8.3
       typescript: 4.8.3
     dev: true
 
-  /type-coverage/2.22.0_typescript@4.8.3:
-    resolution: {integrity: sha512-wgM1yH4J5gAszojftiozxb6HSOvoCqYQLmIS5Ybo4HpBtr9BrVgK5duj4e3tkc28Xg6VA2WPB8GFC+oJw352oQ==}
+  /type-coverage/2.27.0_typescript@4.8.3:
+    resolution: {integrity: sha512-Gs4HcUPrZ+Z7De/eqZfw60SOEjzN30CI94p/2luye0IUI1y9TsWVOkchrqArR3khpN+ACXXQyxsiqH0FdoN48Q==}
     hasBin: true
     dependencies:
       minimist: 1.2.6
-      type-coverage-core: 2.22.0_typescript@4.8.3
+      type-coverage-core: 2.26.3_typescript@4.8.3
     transitivePeerDependencies:
       - typescript
     dev: true
