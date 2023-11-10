@@ -1,28 +1,24 @@
-declare module '@size-limit/esbuild/convert-config' {
+declare module 'size-limit' {
   import { BuildOptions } from 'esbuild'
 
-  function convertConfig(esbuildConfig: BuildOptions, configPath: string): void
+  export interface SizeLimitConfig {
+    configPath: string
+    saveBundle: string
+  }
 
-  export = convertConfig
-}
+  export interface SizeLimitCheck {
+    import?: string
+    files: string[] | string
+    ignore?: string[]
+    esbuild?: false
+    config?: string
+    esbuildConfig: BuildOptions
+    esbuildOutfile: string
+    modifyEsbuildConfig?(esbuildConfig: BuildOptions): BuildOptions
+  }
 
-declare module '@size-limit/esbuild/get-config' {
-  import { BuildOptions } from 'esbuild'
-
-  function getConfig(
-    config: {
-      configPath: string
-      saveBundle: string
-    },
-    check: {
-      esbuild?: false
-      config?: string
-      esbuildConfig: BuildOptions
-      esbuildOutfile: string
-      modifyEsbuildConfig?(esbuildConfig: BuildOptions): BuildOptions
-    },
-    esbuildOutfile: string,
-  ): Promise<BuildOptions>
-
-  export = getConfig
+  export const processImport: (
+    check: SizeLimitCheck,
+    output: string,
+  ) => Promise<void>
 }

@@ -1,5 +1,5 @@
 declare module '@size-limit/file' {
-  export = [
+  export default [
     {
       name: '@size-limit/file',
     },

@@ -10,12 +10,10 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "pnpm@7.12.1",
+  "packageManager": "pnpm@8.10.2",
   "scripts": {
-    "build": "run-s build:tsc build:r",
-    "build:r": "r -f cjs",
-    "build:tsc": "tsc -b",
-    "clean": "rimraf 'packages/**/{lib,*.tsbuildinfo}'",
+    "build": "tsc -b",
+    "clean": "rimraf --glob 'packages/**/{lib,*.tsbuildinfo}'",
     "codesandbox:install": "yarn",
     "dev": "w -e docs --disableDotRule --publicPath /",
     "lint": "run-p lint:*",
@@ -33,26 +31,27 @@
     "version": "changeset version"
   },
   "devDependencies": {
-    "@1stg/app-config": "^7.3.0",
-    "@1stg/lib-config": "^10.3.0",
-    "@changesets/changelog-github": "^0.4.6",
-    "@changesets/cli": "^2.24.4",
+    "@1stg/app-config": "^9.0.0",
+    "@1stg/lib-config": "^12.0.0",
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.2",
     "@pkgr/webpack": "^3.4.0",
     "@pkgr/webpack-mdx": "^2.2.0",
-    "@types/node": "^18.7.18",
-    "@types/react": "^18.0.20",
-    "@types/react-dom": "^18.0.6",
-    "@types/web": "^0.0.73",
-    "github-markdown-css": "^5.1.0",
+    "@types/node": "^18.18.9",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/web": "^0.0.119",
+    "github-markdown-css": "^5.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.0",
+    "react-router-dom": "^6.18.0",
+    "rimraf": "^5.0.5",
     "sirv-cli": "^2.0.2",
-    "size-limit": "^8.1.0",
+    "size-limit": "^10.0.2",
     "size-limit-node-esbuild": "link:packages/node-esbuild",
     "size-limit-preset-node-lib": "link:packages/preset-node-lib",
-    "type-coverage": "^2.22.0",
-    "typescript": "^4.8.3"
+    "type-coverage": "^2.27.0",
+    "typescript": "^5.2.2"
   },
   "resolutions": {
     "prettier": "^2.7.1"
@@ -88,7 +87,7 @@
   "size-limit": [
     {
       "path": "./packages/node-esbuild/lib/index.js",
-      "limit": "500B"
+      "limit": "650B"
     },
     {
       "path": "./packages/preset-node-lib/lib/index.js",
