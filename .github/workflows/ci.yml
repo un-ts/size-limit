@@ -14,7 +14,8 @@ jobs:
           - 20
         os:
           - macos-latest
-          - windows-latest
+          # https://github.com/ai/size-limit/issues/336
+          # - windows-latest
           - ubuntu-latest
     runs-on: ${{ matrix.os }}
     steps:
