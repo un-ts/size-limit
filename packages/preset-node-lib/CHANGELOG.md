@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.3.0
+
+### Minor Changes
+
+- [`761cdc8`](https://github.com/un-ts/size-limit/commit/761cdc82c72c8f5a26465733fe3e99d22210fe45) Thanks [@JounQin](https://github.com/JounQin)! - feat!: bump size-limit, migrate to ESM
+
+### Patch Changes
+
+- Updated dependencies [[`761cdc8`](https://github.com/un-ts/size-limit/commit/761cdc82c72c8f5a26465733fe3e99d22210fe45)]:
+  - size-limit-node-esbuild@0.3.0
+
 ## 0.2.0
 
 ### Minor Changes
