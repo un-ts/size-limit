@@ -54,7 +54,7 @@
     "typescript": "^5.2.2"
   },
   "resolutions": {
-    "prettier": "^2.7.1"
+    "prettier": "^2.8.8"
   },
   "commitlint": {
     "extends": "@1stg"
