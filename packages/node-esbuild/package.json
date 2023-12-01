@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "nanoid": "^5.0.3",
-    "size-limit": "^10.0.2",
+    "size-limit": "^10.0.3",
     "tslib": "^2.6.2"
   },
   "publishConfig": {
