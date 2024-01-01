@@ -15,8 +15,8 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0(@markuplint/ml-core@3.14.0)(@types/node@18.18.9)(markuplint@3.14.0)(prettier@2.8.8)(svelte@3.49.0)(ts-node@10.8.2)(typescript@5.2.2)
       '@1stg/lib-config':
-        specifier: ^12.0.0
-        version: 12.0.0(@markuplint/ml-core@3.14.0)(@types/node@18.18.9)(@vue/compiler-sfc@3.2.37)(markuplint@3.14.0)(svelte@3.49.0)(ts-node@10.8.2)(typescript@5.2.2)
+        specifier: ^12.0.1
+        version: 12.0.1(@markuplint/ml-core@3.14.0)(@types/node@18.18.9)(@vue/compiler-sfc@3.2.37)(markuplint@3.14.0)(svelte@3.49.0)(ts-node@10.8.2)(typescript@5.2.2)
       '@changesets/changelog-github':
         specifier: ^0.4.8
         version: 0.4.8
@@ -260,12 +260,115 @@ packages:
       - vue
     dev: true
 
+  /@1stg/common-config@9.0.1(@markuplint/ml-core@3.14.0)(@types/node@18.18.9)(markuplint@3.14.0)(svelte@3.49.0)(ts-node@10.8.2)(typescript@5.2.2):
+    resolution: {integrity: sha512-XEAcqqjQyRcDyqYXRLgPLs12Vi6sLqQMjkgewJo3awXVUuFgJD2ppHdSjS9AlBujsf9XwYeEBBWAk2CJUVmD2Q==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    dependencies:
+      '@1stg/babel-preset': 3.2.3(@babel/core@7.23.3)(typescript@5.2.2)
+      '@1stg/commitlint-config': 3.2.0
+      '@1stg/eslint-config': 7.0.1(@babel/core@7.23.3)(@types/node@18.18.9)(eslint@8.53.0)(prettier@2.8.8)(svelte@3.49.0)(ts-node@10.8.2)(typescript@5.2.2)
+      '@1stg/lint-staged': 3.4.1(lint-staged@13.3.0)(svelte@3.49.0)(typescript@5.2.2)
+      '@1stg/markuplint-config': 3.0.1(@markuplint/ml-core@3.14.0)(eslint@8.53.0)(markuplint@3.14.0)
+      '@1stg/prettier-config': 3.9.2(prettier@2.8.8)(svelte@3.49.0)
+      '@1stg/remark-preset': 2.0.0(prettier@2.8.8)
+      '@1stg/simple-git-hooks': 0.2.3(@commitlint/cli@17.8.1)(lint-staged@13.3.0)(simple-git-hooks@2.9.0)
+      '@1stg/tsconfig': 2.3.3(typescript@5.2.2)
+      '@babel/core': 7.23.3
+      '@commitlint/cli': 17.8.1
+      eslint: 8.53.0
+      lint-staged: 13.3.0
+      npm-run-all: 4.1.5
+      prettier: 2.8.8
+      simple-git-hooks: 2.9.0
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - '@babel/traverse'
+      - '@markuplint/ml-core'
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - enquirer
+      - eslint-import-resolver-node
+      - eslint-import-resolver-webpack
+      - jest
+      - lerna
+      - markuplint
+      - supports-color
+      - svelte
+      - ts-node
+      - typescript
+      - vue
+    dev: true
+
   /@1stg/config@0.2.1:
     resolution: {integrity: sha512-fStBgzyQnL0/bdIcHCplmrjFN9SBfnkldQ+TnpKnBFmp7jIxoggSRL3kaEFbGlq2lbV/H7Udy3bmJWTtdDH5Iw==}
     dev: true
 
   /@1stg/eslint-config@7.0.0(@babel/core@7.23.3)(@types/node@18.18.9)(eslint@8.53.0)(prettier@2.8.8)(svelte@3.49.0)(ts-node@10.8.2)(typescript@5.2.2):
     resolution: {integrity: sha512-J1+0FbTvZK2CB/JokzP/D37GhAtJi42yAJep1wBw213QdDhktI2iV7VmwKvoPlLL8CB8JwF955UFKusG9lC7tA==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      eslint: '>=8.0.0'
+    dependencies:
+      '@1stg/config': 0.2.1
+      '@angular-eslint/eslint-plugin': 16.3.1(eslint@8.53.0)(typescript@5.2.2)
+      '@angular-eslint/eslint-plugin-template': 16.3.1(eslint@8.53.0)(typescript@5.2.2)
+      '@angular-eslint/template-parser': 16.3.1(eslint@8.53.0)(typescript@5.2.2)
+      '@babel/eslint-parser': 7.23.3(@babel/core@7.23.3)(eslint@8.53.0)
+      '@babel/eslint-plugin': 7.22.10(@babel/eslint-parser@7.23.3)(eslint@8.53.0)
+      '@eslint-community/eslint-plugin-eslint-comments': 3.2.1(eslint@8.53.0)
+      '@pkgr/utils': 2.4.2
+      '@typescript-eslint/eslint-plugin': 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.53.0)(typescript@5.2.2)
+      '@typescript-eslint/parser': 5.62.0(eslint@8.53.0)(typescript@5.2.2)
+      angular-eslint-template-parser: 0.1.1(@angular-eslint/template-parser@16.3.1)
+      eslint: 8.53.0
+      eslint-config-prettier: 8.10.0(eslint@8.53.0)
+      eslint-config-standard: 17.1.0(eslint-plugin-i@2.29.0)(eslint-plugin-n@16.3.0)(eslint-plugin-promise@6.1.1)(eslint@8.53.0)
+      eslint-config-standard-jsx: 11.0.0(eslint-plugin-react@7.33.2)(eslint@8.53.0)
+      eslint-config-standard-react: 13.0.0(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(eslint@8.53.0)
+      eslint-formatter-friendly: 7.0.0
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@5.62.0)(eslint-plugin-i@2.29.0)(eslint@8.53.0)
+      eslint-plugin-css: 0.8.1(eslint@8.53.0)
+      eslint-plugin-es-x: 7.3.0(eslint@8.53.0)
+      eslint-plugin-import: /eslint-plugin-i@2.29.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.53.0)
+      eslint-plugin-jest: 27.6.0(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.53.0)(typescript@5.2.2)
+      eslint-plugin-jsdoc: 46.9.0(eslint@8.53.0)
+      eslint-plugin-jsonc: 2.10.0(eslint@8.53.0)
+      eslint-plugin-markup: 0.11.0(@types/node@18.18.9)(eslint@8.53.0)(typescript@5.2.2)
+      eslint-plugin-mdx: 2.2.0(eslint@8.53.0)
+      eslint-plugin-n: 16.3.0(eslint@8.53.0)
+      eslint-plugin-prettier: 4.2.1(eslint-config-prettier@8.10.0)(eslint@8.53.0)(prettier@2.8.8)
+      eslint-plugin-promise: 6.1.1(eslint@8.53.0)
+      eslint-plugin-react: 7.33.2(eslint@8.53.0)
+      eslint-plugin-react-hooks: 4.6.0(eslint@8.53.0)
+      eslint-plugin-regexp: 1.15.0(eslint@8.53.0)
+      eslint-plugin-simple-import-sort: 10.0.0(eslint@8.53.0)
+      eslint-plugin-sonar: 0.12.0(@babel/core@7.23.3)(@typescript-eslint/parser@5.62.0)(eslint@8.53.0)(typescript@5.2.2)
+      eslint-plugin-sonarjs: 0.19.0(eslint@8.53.0)
+      eslint-plugin-svelte: 2.35.0(eslint@8.53.0)(svelte@3.49.0)(ts-node@10.8.2)
+      eslint-plugin-toml: 0.5.0(eslint@8.53.0)
+      eslint-plugin-unicorn: 47.0.0(eslint@8.53.0)
+      eslint-plugin-vue: 9.18.1(eslint@8.53.0)
+      eslint-plugin-yml: 1.10.0(eslint@8.53.0)
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - encoding
+      - eslint-import-resolver-node
+      - eslint-import-resolver-webpack
+      - jest
+      - prettier
+      - supports-color
+      - svelte
+      - ts-node
+      - typescript
+    dev: true
+
+  /@1stg/eslint-config@7.0.1(@babel/core@7.23.3)(@types/node@18.18.9)(eslint@8.53.0)(prettier@2.8.8)(svelte@3.49.0)(ts-node@10.8.2)(typescript@5.2.2):
+    resolution: {integrity: sha512-qdGayfrv/LPanOs4N/yjt1yfMyeqYHGen/33wbBDVs9mmAJ+W9LCeueYaSfEzm0GOWeIJ6qIiLSHYiTcpGCDnw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=8.0.0'
@@ -326,11 +429,11 @@ packages:
       - typescript
     dev: true
 
-  /@1stg/lib-config@12.0.0(@markuplint/ml-core@3.14.0)(@types/node@18.18.9)(@vue/compiler-sfc@3.2.37)(markuplint@3.14.0)(svelte@3.49.0)(ts-node@10.8.2)(typescript@5.2.2):
-    resolution: {integrity: sha512-Dkz0ouc5M9DvkY0EG/RXNjTkcE544e5gScU2mKBInc8W7QOidBjji9OCsw29jxjS0o6cPRSELXZJbSJC2xfkrg==}
+  /@1stg/lib-config@12.0.1(@markuplint/ml-core@3.14.0)(@types/node@18.18.9)(@vue/compiler-sfc@3.2.37)(markuplint@3.14.0)(svelte@3.49.0)(ts-node@10.8.2)(typescript@5.2.2):
+    resolution: {integrity: sha512-IovDXaUtwI4+mb0Ker81Hb618jDsaz1qXaQ+gMFX52l6G93DTFdULqfwCsqu0Mie4787bxL8l3r6ORHwuVq2Ww==}
     engines: {node: ^14.18.0 || >=16.0.0}
     dependencies:
-      '@1stg/common-config': 9.0.0(@markuplint/ml-core@3.14.0)(@types/node@18.18.9)(markuplint@3.14.0)(svelte@3.49.0)(ts-node@10.8.2)(typescript@5.2.2)
+      '@1stg/common-config': 9.0.1(@markuplint/ml-core@3.14.0)(@types/node@18.18.9)(markuplint@3.14.0)(svelte@3.49.0)(ts-node@10.8.2)(typescript@5.2.2)
       '@pkgr/rollup': 4.1.3(@vue/compiler-sfc@3.2.37)
     transitivePeerDependencies:
       - '@babel/traverse'
@@ -512,6 +615,14 @@ packages:
 
   /@1stg/tsconfig@2.3.2(typescript@5.2.2):
     resolution: {integrity: sha512-vNYoC1cvdGHCA3tJMUskaVsNVTt6QIOFO+eDtdO4JvqHllvi+o2QSqy5vTpAGMODSqbyFcLdPW7sD5kj9VQmNA==}
+    peerDependencies:
+      typescript: '>=3.0.0'
+    dependencies:
+      typescript: 5.2.2
+    dev: true
+
+  /@1stg/tsconfig@2.3.3(typescript@5.2.2):
+    resolution: {integrity: sha512-JHXiryRSs4w/ho/Uf3lDMlrYIf2p8+2gMgp23/j/HJfGF2+XwgRCnPgLA2VZ+LtGdqYX8ZJ4EmMgjFDdEdTMbg==}
     peerDependencies:
       typescript: '>=3.0.0'
     dependencies:
@@ -729,7 +840,7 @@ packages:
       '@babel/eslint-parser': ^7.11.0
       eslint: ^7.5.0 || ^8.0.0
     dependencies:
-      '@babel/eslint-parser': 7.23.3(@babel/core@7.19.1)(eslint@8.53.0)
+      '@babel/eslint-parser': 7.23.3(@babel/core@7.23.3)(eslint@8.53.0)
       eslint: 8.53.0
       eslint-rule-composer: 0.3.0
     dev: true
@@ -5533,10 +5644,10 @@ packages:
     dependencies:
       '@rollup/pluginutils': 5.0.5(rollup@3.29.4)
       '@types/resolve': 1.20.2
-      deepmerge: 4.2.2
+      deepmerge: 4.3.1
       is-builtin-module: 3.2.1
       is-module: 1.0.0
-      resolve: 1.22.1
+      resolve: 1.22.8
       rollup: 3.29.4
     dev: true
 
@@ -11203,9 +11314,9 @@ packages:
       '@types/glob': 7.2.0
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.2.12
+      fast-glob: 3.3.2
       glob: 7.2.3
-      ignore: 5.2.0
+      ignore: 5.2.4
       merge2: 1.4.1
       slash: 3.0.0
     dev: true
@@ -12330,7 +12441,7 @@ packages:
   /is-reference@1.2.1:
     resolution: {integrity: sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ==}
     dependencies:
-      '@types/estree': 0.0.52
+      '@types/estree': 1.0.5
     dev: true
 
   /is-reference@3.0.0:
@@ -18410,7 +18521,7 @@ packages:
     dependencies:
       '@javascript-obfuscator/escodegen': 2.3.0
       '@rollup/pluginutils': 4.2.1
-      acorn: 8.8.0
+      acorn: 8.11.2
       convert-source-map: 1.8.0
       multi-stage-sourcemap: 0.3.1
       unassert: 2.0.2
