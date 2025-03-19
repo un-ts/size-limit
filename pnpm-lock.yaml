@@ -69,8 +69,8 @@ importers:
         specifier: link:packages/preset-node-lib
         version: link:packages/preset-node-lib
       type-coverage:
-        specifier: ^2.27.0
-        version: 2.27.0(typescript@5.2.2)
+        specifier: ^2.29.7
+        version: 2.29.7(typescript@5.2.2)
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
@@ -11203,7 +11203,7 @@ packages:
       '@types/glob': 7.2.0
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.2.12
+      fast-glob: 3.3.2
       glob: 7.2.3
       ignore: 5.2.0
       merge2: 1.4.1
@@ -11228,7 +11228,7 @@ packages:
     dependencies:
       array-union: 3.0.1
       dir-glob: 3.0.1
-      fast-glob: 3.2.12
+      fast-glob: 3.3.2
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 4.0.0
@@ -11239,7 +11239,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       dir-glob: 3.0.1
-      fast-glob: 3.2.12
+      fast-glob: 3.3.2
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 4.0.0
@@ -20122,12 +20122,12 @@ packages:
       prelude-ls: 1.2.1
     dev: true
 
-  /type-coverage-core@2.26.3(typescript@5.2.2):
-    resolution: {integrity: sha512-rzNdW/tClHJvsUiy787b/UX53bNh1Dn7A5KqZDQjkL3j7iKFv/KnTolxDBBgTPcK4Zn9Ab7WLrik7cXw2oZZqw==}
+  /type-coverage-core@2.29.7(typescript@5.2.2):
+    resolution: {integrity: sha512-bt+bnXekw3p5NnqiZpNupOOxfUKGw2Z/YJedfGHkxpeyGLK7DZ59a6Wds8eq1oKjJc5Wulp2xL207z8FjFO14Q==}
     peerDependencies:
       typescript: 2 || 3 || 4 || 5
     dependencies:
-      fast-glob: 3.2.12
+      fast-glob: 3.3.2
       minimatch: 9.0.3
       normalize-path: 3.0.0
       tslib: 2.6.2
@@ -20135,12 +20135,13 @@ packages:
       typescript: 5.2.2
     dev: true
 
-  /type-coverage@2.27.0(typescript@5.2.2):
-    resolution: {integrity: sha512-Gs4HcUPrZ+Z7De/eqZfw60SOEjzN30CI94p/2luye0IUI1y9TsWVOkchrqArR3khpN+ACXXQyxsiqH0FdoN48Q==}
+  /type-coverage@2.29.7(typescript@5.2.2):
+    resolution: {integrity: sha512-E67Chw7SxFe++uotisxt/xzB1UxxvLztzzQqVyUZ/jKujsejVqvoO5vn25oMvqJydqYrASBVBCQCy082E2qQYQ==}
     hasBin: true
     dependencies:
+      chalk: 4.1.2
       minimist: 1.2.6
-      type-coverage-core: 2.26.3(typescript@5.2.2)
+      type-coverage-core: 2.29.7(typescript@5.2.2)
     transitivePeerDependencies:
       - typescript
     dev: true
