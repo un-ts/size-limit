@@ -33,7 +33,7 @@
   "devDependencies": {
     "@1stg/app-config": "^9.0.0",
     "@1stg/lib-config": "^12.0.0",
-    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.26.2",
     "@pkgr/webpack": "^3.4.0",
     "@pkgr/webpack-mdx": "^2.2.0",
