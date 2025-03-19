@@ -28,16 +28,16 @@ importers:
         version: 3.4.0(browserslist@4.22.1)(esbuild@0.18.20)(less@4.1.3)(ts-node@10.8.2)(typescript@5.2.2)
       '@pkgr/webpack-mdx':
         specifier: ^2.2.0
-        version: 2.2.0(browserslist@4.22.1)(esbuild@0.18.20)(less@4.1.3)(react@18.2.0)(ts-node@10.8.2)(typescript@5.2.2)(webpack@5.74.0)
+        version: 2.2.0(browserslist@4.22.1)(esbuild@0.18.20)(less@4.1.3)(react@18.3.1)(ts-node@10.8.2)(typescript@5.2.2)(webpack@5.74.0)
       '@types/node':
         specifier: ^18.18.9
         version: 18.18.9
       '@types/react':
-        specifier: ^18.2.37
-        version: 18.2.37
+        specifier: ^18.3.18
+        version: 18.3.18
       '@types/react-dom':
-        specifier: ^18.2.15
-        version: 18.2.15
+        specifier: ^18.3.5
+        version: 18.3.5(@types/react@18.3.18)
       '@types/web':
         specifier: ^0.0.119
         version: 0.0.119
@@ -45,14 +45,14 @@ importers:
         specifier: ^5.4.0
         version: 5.4.0
       react:
-        specifier: ^18.2.0
-        version: 18.2.0
+        specifier: ^18.3.1
+        version: 18.3.1
       react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
       react-router-dom:
         specifier: ^6.18.0
-        version: 6.18.0(react-dom@18.2.0)(react@18.2.0)
+        version: 6.18.0(react-dom@18.3.1)(react@18.3.1)
       rimraf:
         specifier: ^5.0.5
         version: 5.0.5
@@ -5293,11 +5293,11 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@pkgr/webpack-mdx@2.2.0(browserslist@4.22.1)(esbuild@0.18.20)(less@4.1.3)(react@18.2.0)(ts-node@10.8.2)(typescript@5.2.2)(webpack@5.74.0):
+  /@pkgr/webpack-mdx@2.2.0(browserslist@4.22.1)(esbuild@0.18.20)(less@4.1.3)(react@18.3.1)(ts-node@10.8.2)(typescript@5.2.2)(webpack@5.74.0):
     resolution: {integrity: sha512-8TMEgsdebZwayZ8AEl/LK3eGvqiP6I1aPi7XjUEWozwzUl4NpCOSUbs9v2n4OicjzNluT5myaqBtT7VrqQ46ew==}
     dependencies:
       '@mdx-js/loader': 2.1.3(webpack@5.74.0)
-      '@pkgr/webpack-react': 2.1.1(browserslist@4.22.1)(esbuild@0.18.20)(less@4.1.3)(react@18.2.0)(ts-node@10.8.2)(typescript@5.2.2)
+      '@pkgr/webpack-react': 2.1.1(browserslist@4.22.1)(esbuild@0.18.20)(less@4.1.3)(react@18.3.1)(ts-node@10.8.2)(typescript@5.2.2)
       rehype-raw: 6.1.1
       remark-gfm: 3.0.1
     transitivePeerDependencies:
@@ -5322,14 +5322,14 @@ packages:
       - webpack-cli
     dev: true
 
-  /@pkgr/webpack-react@2.1.1(browserslist@4.22.1)(esbuild@0.18.20)(less@4.1.3)(react@18.2.0)(ts-node@10.8.2)(typescript@5.2.2):
+  /@pkgr/webpack-react@2.1.1(browserslist@4.22.1)(esbuild@0.18.20)(less@4.1.3)(react@18.3.1)(ts-node@10.8.2)(typescript@5.2.2):
     resolution: {integrity: sha512-DdYRZ9vQ+w9F2X3pBYFu594LmgIEs6q8p9uUAlrYDrU7JADpSsmzOxrZgzv2XpOQXba1DoKbs/Z+0UtWUmVnYQ==}
     peerDependencies:
       react: '>=16.0.0'
     dependencies:
       '@pkgr/webpack': 3.4.0(browserslist@4.22.1)(esbuild@0.18.20)(less@4.1.3)(ts-node@10.8.2)(typescript@5.2.2)
       '@svgr/webpack': 6.3.1
-      react: 18.2.0
+      react: 18.3.1
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc/core'
@@ -6082,17 +6082,18 @@ packages:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
     dev: true
 
-  /@types/react-dom@18.2.15:
-    resolution: {integrity: sha512-HWMdW+7r7MR5+PZqJF6YFNSCtjz1T0dsvo/f1BV6HkV+6erD/nA7wd9NM00KVG83zf2nJ7uATPO9ttdIPvi3gg==}
+  /@types/react-dom@18.3.5(@types/react@18.3.18):
+    resolution: {integrity: sha512-P4t6saawp+b/dFrUr2cvkVsfvPguwsxtH6dNIYRllMsefqFzkZk5UIjzyDOv5g1dXIPdG4Sp1yCR4Z6RCUsG/Q==}
+    peerDependencies:
+      '@types/react': ^18.0.0
     dependencies:
-      '@types/react': 18.2.37
+      '@types/react': 18.3.18
     dev: true
 
-  /@types/react@18.2.37:
-    resolution: {integrity: sha512-RGAYMi2bhRgEXT3f4B92WTohopH6bIXw05FuGlmJEnv/omEn190+QYEIYxIAuIBdKgboYYdVved2p1AxZVQnaw==}
+  /@types/react@18.3.18:
+    resolution: {integrity: sha512-t4yC+vtgnkYjNSKlFx1jkAhH8LgTo2N/7Qvi83kdEaUtMDiwpbLAktKDaAMlRcJ5eSxZkH74eEGt1ky31d7kfQ==}
     dependencies:
       '@types/prop-types': 15.7.5
-      '@types/scheduler': 0.16.2
       csstype: 3.1.0
     dev: true
 
@@ -6114,10 +6115,6 @@ packages:
 
   /@types/retry@0.12.0:
     resolution: {integrity: sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==}
-    dev: true
-
-  /@types/scheduler@0.16.2:
-    resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
     dev: true
 
   /@types/semver@7.5.5:
@@ -17110,21 +17107,21 @@ packages:
       webpack: 5.74.0(esbuild@0.18.20)
     dev: true
 
-  /react-dom@18.2.0(react@18.2.0):
-    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+  /react-dom@18.3.1(react@18.3.1):
+    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
-      react: ^18.2.0
+      react: ^18.3.1
     dependencies:
       loose-envify: 1.4.0
-      react: 18.2.0
-      scheduler: 0.23.0
+      react: 18.3.1
+      scheduler: 0.23.2
     dev: true
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
 
-  /react-router-dom@6.18.0(react-dom@18.2.0)(react@18.2.0):
+  /react-router-dom@6.18.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-Ubrue4+Ercc/BoDkFQfc6og5zRQ4A8YxSO3Knsne+eRbZ+IepAsK249XBH/XaFuOYOYr3L3r13CXTLvYt5JDjw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -17132,23 +17129,23 @@ packages:
       react-dom: '>=16.8'
     dependencies:
       '@remix-run/router': 1.11.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-router: 6.18.0(react@18.2.0)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-router: 6.18.0(react@18.3.1)
     dev: true
 
-  /react-router@6.18.0(react@18.2.0):
+  /react-router@6.18.0(react@18.3.1):
     resolution: {integrity: sha512-vk2y7Dsy8wI02eRRaRmOs9g2o+aE72YCx5q9VasT1N9v+lrdB79tIqrjMfByHiY5+6aYkH2rUa5X839nwWGPDg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
     dependencies:
       '@remix-run/router': 1.11.0
-      react: 18.2.0
+      react: 18.3.1
     dev: true
 
-  /react@18.2.0:
-    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+  /react@18.3.1:
+    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
@@ -18555,8 +18552,8 @@ packages:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
     dev: true
 
-  /scheduler@0.23.0:
-    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
+  /scheduler@0.23.2:
+    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
     dependencies:
       loose-envify: 1.4.0
     dev: true
