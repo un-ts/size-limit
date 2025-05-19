@@ -2,13 +2,16 @@ coverage
 dist
 lib
 LICENSE
+*.ico
 *.js
 *.json
 *.lock
 *.log
 *.patch
+*.png
 *.ts
 *.tsbuildinfo
 *.tsx
+*.webmanifest
 *.yaml
 *.yml
