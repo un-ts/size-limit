@@ -81,11 +81,11 @@
   },
   "size-limit": [
     {
-      "path": "./packages/node-esbuild/lib/index.js",
-      "limit": "650B"
+      "path": "./packages/node-esbuild/src/index.ts",
+      "limit": "900B"
     },
     {
-      "path": "./packages/preset-node-lib/lib/index.js",
+      "path": "./packages/preset-node-lib/src/index.ts",
       "limit": "150B"
     }
   ],
