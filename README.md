@@ -26,10 +26,10 @@
 
 This repository is a monorepo managed by [changesets][] what means we actually publish several packages to npm from same codebase, including:
 
-| Package                                                   | Description                          | Version                                                                                                                                                                                                                                                            |
-| --------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`size-limit-node-esbuild`](/packages/node-esbuild)       | Node esbuild plugin for Size Limit   | [![npm](https://img.shields.io/npm/v/size-limit-node-esbuild.svg)](https://www.npmjs.com/package/size-limit-node-esbuild) [![View changelog](https://img.shields.io/badge/changelog-explore-brightgreen)](https://changelogs.xyz/size-limit-node-esbuild)          |
-| [`size-limit-preset-node-lib`](/packages/preset-node-lib) | Size Limit preset for Node libraries | [![npm](https://img.shields.io/npm/v/size-limit-preset-node-lib.svg)](https://www.npmjs.com/package/size-limit-preset-node-lib) [![View changelog](https://img.shields.io/badge/changelog-explore-brightgreen)](https://changelogs.xyz/size-limit-preset-node-lib) |
+| Package                                                   | Description                          | Version                                                                                                                         |
+| --------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| [`size-limit-node-esbuild`](/packages/node-esbuild)       | Node esbuild plugin for Size Limit   | [![npm](https://img.shields.io/npm/v/size-limit-node-esbuild.svg)](https://www.npmjs.com/package/size-limit-node-esbuild)       |
+| [`size-limit-preset-node-lib`](/packages/preset-node-lib) | Size Limit preset for Node libraries | [![npm](https://img.shields.io/npm/v/size-limit-preset-node-lib.svg)](https://www.npmjs.com/package/size-limit-preset-node-lib) |
 
 ## Sponsors and Backers
 
