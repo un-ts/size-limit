@@ -4,84 +4,78 @@
   "type": "module",
   "description": "Incredible `size-limit` plugins, make `size-limit` greater",
   "repository": "git+https://github.com/un-ts/size-limit.git",
-  "author": "JounQin (https://www.1stG.me) <admin@1stg.me>",
+  "author": "JounQin <admin@1stg.me> (https://www.1stG.me)",
   "license": "MIT",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "pnpm@8.10.2",
+  "packageManager": "yarn@4.9.1",
   "scripts": {
     "build": "tsc -b",
-    "clean": "rimraf --glob 'packages/**/{lib,*.tsbuildinfo}'",
-    "codesandbox:install": "yarn",
-    "dev": "w -e docs --disableDotRule --publicPath /",
-    "lint": "run-p lint:*",
-    "lint:es": "eslint . --cache -f friendly",
+    "clean": "rimraf -g 'packages/**/{lib,*.tsbuildinfo}'",
+    "docs": "vite",
+    "docs:build": "vite build",
+    "lint": "run-p 'lint:*'",
+    "lint:es": "eslint . --cache",
     "lint:style": "stylelint . --cache",
     "lint:tsc": "tsc --noEmit",
-    "postversion": "pnpm i --no-frozen-lockfile",
-    "prepare": "simple-git-hooks",
-    "prerelease": "pnpm build",
-    "release": "changeset publish",
+    "prepare": "simple-git-hooks && yarn-berry-deduplicate || exit 0",
+    "release": "yarn build && changeset publish",
     "serve": "sirv dist -s",
     "test": "size-limit",
     "typecov": "type-coverage",
-    "vercel-build": "w -e docs -p --publicPath /",
-    "version": "changeset version"
+    "version": "changeset version && yarn --no-immutable"
   },
   "devDependencies": {
-    "@1stg/app-config": "^9.0.0",
-    "@1stg/lib-config": "^12.0.0",
-    "@changesets/changelog-github": "^0.4.8",
-    "@changesets/cli": "^2.26.2",
-    "@pkgr/webpack": "^3.4.0",
-    "@pkgr/webpack-mdx": "^2.2.0",
-    "@types/node": "^18.18.9",
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
-    "@types/web": "^0.0.119",
-    "github-markdown-css": "^5.4.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.18.0",
-    "rimraf": "^5.0.5",
-    "sirv-cli": "^2.0.2",
-    "size-limit": "^10.0.2",
+    "@1stg/app-config": "^14.0.0",
+    "@1stg/common-config": "^14.0.0",
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.29.4",
+    "@commitlint/cli": "^19.8.1",
+    "@mdx-js/rollup": "^3.1.0",
+    "@shikijs/rehype": "^3.4.2",
+    "@types/node": "^18.19.101",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "@types/web": "^0.0.235",
+    "@vitejs/plugin-react-swc": "^3.9.0",
+    "eslint": "^9.27.0",
+    "github-markdown-css": "^5.8.1",
+    "nano-staged": "^0.8.0",
+    "npm-run-all2": "^8.0.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.0",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.1",
+    "rimraf": "^6.0.1",
+    "sass": "^1.89.0",
+    "simple-git-hooks": "^2.13.0",
+    "sirv-cli": "^3.0.1",
+    "size-limit": "^10.0.3",
     "size-limit-node-esbuild": "link:packages/node-esbuild",
     "size-limit-preset-node-lib": "link:packages/preset-node-lib",
-    "type-coverage": "^2.27.0",
-    "typescript": "^5.2.2"
+    "stylelint": "^16.19.1",
+    "type-coverage": "^2.29.7",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "yarn-berry-deduplicate": "^6.1.3"
   },
   "resolutions": {
-    "prettier": "^2.8.8"
+    "prettier": "^3.5.3"
   },
+  "browserslist": "extends @1stg/browserslist-config/modern",
   "commitlint": {
     "extends": "@1stg"
   },
-  "eslintConfig": {
-    "extends": "@1stg",
-    "rules": {
-      "react/react-in-jsx-scope": "off"
-    }
+  "markuplint": {
+    "extends": "@1stg/markuplint-config"
   },
-  "eslintIgnore": [
-    "coverage",
-    "dist",
-    "lib",
-    "/packages/**/CHANGELOG.md",
-    "/pnpm-lock.yaml",
-    "!/.*.cjs"
-  ],
   "prettier": "@1stg/prettier-config",
   "remarkConfig": {
     "plugins": [
       "@1stg/preset"
-    ]
-  },
-  "renovate": {
-    "extends": [
-      "@1stg"
     ]
   },
   "size-limit": [
