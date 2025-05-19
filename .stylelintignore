@@ -2,7 +2,9 @@ coverage
 dist
 lib
 LICENSE
+*.js
 *.json
+*.lock
 *.log
 *.patch
 *.ts

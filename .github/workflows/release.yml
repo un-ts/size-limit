@@ -5,6 +5,15 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  id-token: write
+  pull-requests: write
+
 jobs:
   release:
     name: Release
@@ -16,26 +25,24 @@ jobs:
           # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
           fetch-depth: 0
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-
       - name: Setup Node.js LTS
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: pnpm
+          cache: yarn
 
       - name: Install Dependencies
-        run: pnpm i
+        run: yarn --immutable
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm release
-          version: pnpm run version
           commit: 'chore: release package(s)'
           title: 'chore: release package(s)'
+          publish: yarn release
+          version: yarn run version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
