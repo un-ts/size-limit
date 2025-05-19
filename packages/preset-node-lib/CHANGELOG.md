@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.4.0
+
+### Minor Changes
+
+- [#48](https://github.com/un-ts/size-limit/pull/48) [`0ea1dd7`](https://github.com/un-ts/size-limit/commit/0ea1dd708def14d3d60c9999f33dd4cb4340d301) Thanks [@JounQin](https://github.com/JounQin)! - feat!: bump to `size-limit` v11
+
+### Patch Changes
+
+- Updated dependencies [[`0ea1dd7`](https://github.com/un-ts/size-limit/commit/0ea1dd708def14d3d60c9999f33dd4cb4340d301)]:
+  - size-limit-node-esbuild@0.4.0
+
 ## 0.3.0
 
 ### Minor Changes

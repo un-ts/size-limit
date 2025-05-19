@@ -14718,7 +14718,7 @@ __metadata:
   languageName: node
   linkType: soft
 
-"size-limit-node-esbuild@npm:^0.3.0, size-limit-node-esbuild@workspace:packages/node-esbuild":
+"size-limit-node-esbuild@npm:^0.4.0, size-limit-node-esbuild@workspace:packages/node-esbuild":
   version: 0.0.0-use.local
   resolution: "size-limit-node-esbuild@workspace:packages/node-esbuild"
   dependencies:
@@ -14739,7 +14739,7 @@ __metadata:
   resolution: "size-limit-preset-node-lib@workspace:packages/preset-node-lib"
   dependencies:
     "@size-limit/file": "npm:^11.2.0"
-    size-limit-node-esbuild: "npm:^0.3.0"
+    size-limit-node-esbuild: "npm:^0.4.0"
     tslib: "npm:^2.8.1"
   peerDependencies:
     size-limit: ^11.0.0
