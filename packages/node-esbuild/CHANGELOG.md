@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.3.1
+
+### Patch Changes
+
+- [#46](https://github.com/un-ts/size-limit/pull/46) [`5eb3b61`](https://github.com/un-ts/size-limit/commit/5eb3b617080c6933f1bd9cc3340b0a9114478768) Thanks [@JounQin](https://github.com/JounQin)! - fix: should inherit default esbuild config
+
 ## 0.3.0
 
 ### Minor Changes
