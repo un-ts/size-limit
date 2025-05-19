@@ -57,19 +57,25 @@ export default [
       if (!check.esbuildOutfile) {
         check.esbuildOutfile = path.join(tmpdir(), `size-limit-${nanoid()}`)
       }
+      const defaultEsbuildConfig = await getConfig(
+        config,
+        check,
+        check.esbuildOutfile,
+      )
       if (check.config) {
         const esbuildConfig = (await import(check.config)) as
           | BuildOptions
-          | { default: BuildOptions }
+          | { default?: BuildOptions }
         setPlatformNode(
           // eslint-disable-next-line sonarjs/no-nested-assignment
-          (check.esbuildConfig =
-            'default' in esbuildConfig ? esbuildConfig.default : esbuildConfig),
+          (check.esbuildConfig = {
+            ...defaultEsbuildConfig,
+            ...(('default' in esbuildConfig && esbuildConfig.default) ||
+              esbuildConfig),
+          }),
         )
       } else {
-        check.esbuildConfig = setPlatformNode(
-          await getConfig(config, check, check.esbuildOutfile),
-        )
+        check.esbuildConfig = setPlatformNode(defaultEsbuildConfig)
         if (check.modifyEsbuildConfig) {
           check.esbuildConfig = check.modifyEsbuildConfig(check.esbuildConfig)
         }
