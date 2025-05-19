@@ -1,11 +1,15 @@
 /// <reference path="../shim.d.ts" />
 
 import { tmpdir } from 'node:os'
-import { join } from 'node:path'
+import path from 'node:path'
 
 import type { BuildOptions } from 'esbuild'
 import { nanoid } from 'nanoid/non-secure'
-import { SizeLimitCheck, SizeLimitConfig, processImport } from 'size-limit'
+import {
+  type SizeLimitCheck,
+  type SizeLimitConfig,
+  processImport,
+} from 'size-limit'
 
 // https://github.com/ai/size-limit/blob/f2493379fefc00559af2a8c54fc52cedbbc9b0bd/packages/esbuild/get-config.js
 async function getConfig(
@@ -51,13 +55,14 @@ export default [
       }
       check.esbuildOutfile = config.saveBundle
       if (!check.esbuildOutfile) {
-        check.esbuildOutfile = join(tmpdir(), `size-limit-${nanoid()}`)
+        check.esbuildOutfile = path.join(tmpdir(), `size-limit-${nanoid()}`)
       }
       if (check.config) {
         const esbuildConfig = (await import(check.config)) as
           | BuildOptions
           | { default: BuildOptions }
         setPlatformNode(
+          // eslint-disable-next-line sonarjs/no-nested-assignment
           (check.esbuildConfig =
             'default' in esbuildConfig ? esbuildConfig.default : esbuildConfig),
         )

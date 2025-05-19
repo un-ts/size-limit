@@ -1,5 +1,8 @@
 *.log
 .*cache
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
 .type-coverage
 .vercel
 coverage
