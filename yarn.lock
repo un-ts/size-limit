@@ -4535,10 +4535,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/web@npm:^0.0.235":
-  version: 0.0.235
-  resolution: "@types/web@npm:0.0.235"
-  checksum: 10c0/74303218a2024780ea4a6b9cb82fe982a35da5d7f14085c30bcd6dae26e26a34d80b4991ac89cf1ff7bd88797f2609af834c1ccf568273c5df4ce1eee270f6b6
+"@types/web@npm:^0.0.236":
+  version: 0.0.236
+  resolution: "@types/web@npm:0.0.236"
+  checksum: 10c0/4614a89f2d61539e88b87832267092a473865d43bde8a06dadcf58e82d865e632c4c1832e49d05e20fb8b5d7837bab057fa65852e6343ac9827795eac336e61b
   languageName: node
   linkType: hard
 
@@ -4803,7 +4803,7 @@ __metadata:
     "@types/node": "npm:^22.15.19"
     "@types/react": "npm:^19.1.4"
     "@types/react-dom": "npm:^19.1.5"
-    "@types/web": "npm:^0.0.235"
+    "@types/web": "npm:^0.0.236"
     "@vitejs/plugin-react-swc": "npm:^3.9.0"
     eslint: "npm:^9.27.0"
     github-markdown-css: "npm:^5.8.1"
