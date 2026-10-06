@@ -22,8 +22,9 @@
     "shim.d.ts"
   ],
   "dependencies": {
-    "nanoid": "^5.1.5",
-    "size-limit": "^14.0.0",
+    "esbuild": "^0.28.2",
+    "nanoid": "^6.0.2",
+    "size-limit": "^14.1.0",
     "tslib": "^2.8.1"
   },
   "publishConfig": {
