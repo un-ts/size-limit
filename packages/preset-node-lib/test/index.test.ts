@@ -6,7 +6,7 @@ import type {
   SizeLimitCheck,
   SizeLimitPluginConfig,
   SizeLimitEsbuildPlugin,
-} from '@size-limit/esbuild'
+} from 'size-limit-node-esbuild'
 import { describe, expect, it } from 'vitest'
 
 import preset from 'size-limit-preset-node-lib'
