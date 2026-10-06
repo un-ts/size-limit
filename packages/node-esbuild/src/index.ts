@@ -3,7 +3,7 @@ import esbuildPlugin from '@size-limit/esbuild'
 import type { SizeLimitEsbuildPlugin } from './types.js'
 
 // `@size-limit/esbuild` ships no declarations, and the ambient module below is
-// not always visible to typescript-eslint's project service, so assert it here.
+// not picked up by typescript-eslint's program, so assert the official shape.
 const base = (esbuildPlugin as readonly [SizeLimitEsbuildPlugin])[0]
 
 const plugin: SizeLimitEsbuildPlugin = {

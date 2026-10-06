@@ -11,6 +11,5 @@ export default defineConfig({
       provider: 'istanbul',
       reporter: ['lcov', 'json', 'text'],
     },
-    include: ['packages/*/test/**/*.test.ts'],
   },
 })
