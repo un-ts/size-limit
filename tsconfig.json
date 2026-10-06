@@ -4,7 +4,10 @@
     "noEmit": true,
     // https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping#node-12
     "target": "ES2019",
-    "types": ["node", "web", "mdx", "vite/client"]
+    "types": ["node", "web", "mdx", "vite/client"],
+    "paths": {
+      "size-limit-node-esbuild": ["./packages/node-esbuild/src/index.ts"]
+    }
   },
   "references": [
     {

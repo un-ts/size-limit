@@ -5410,6 +5410,7 @@ __metadata:
     github-markdown-css: "npm:^5.8.1"
     nano-staged: "npm:^1.0.0"
     npm-run-all2: "npm:^9.0.0"
+    prettier: "npm:^3.5.3"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
     react-router-dom: "npm:^7.6.0"
