@@ -25,7 +25,8 @@
     "prepare": "simple-git-hooks && yarn-berry-deduplicate || exit 0",
     "release": "yarn build && changeset publish",
     "serve": "sirv dist -s",
-    "test": "size-limit",
+    "test": "run-p 'test:*'",
+    "test:e2e": "size-limit",
     "test:unit": "vitest run",
     "typecov": "type-coverage",
     "version": "changeset version && yarn --no-immutable"
