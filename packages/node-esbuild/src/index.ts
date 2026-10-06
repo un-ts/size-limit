@@ -1,8 +1,6 @@
 /// <reference path="../shim.d.ts" />
 
-import esbuildPlugin from '@size-limit/esbuild'
-
-import type { SizeLimitEsbuildPlugin } from './types.js'
+import esbuildPlugin, { type SizeLimitEsbuildPlugin } from '@size-limit/esbuild'
 
 const base = esbuildPlugin[0]
 
@@ -32,4 +30,4 @@ export type {
   SizeLimitEsbuildPlugin,
   SizeLimitPlugin,
   SizeLimitPluginConfig,
-} from './types.js'
+} from '@size-limit/esbuild'
