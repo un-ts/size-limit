@@ -24,10 +24,3 @@ const plugin: SizeLimitEsbuildPlugin = {
 }
 
 export default [plugin] as const
-
-export type {
-  SizeLimitCheck,
-  SizeLimitConfig,
-  SizeLimitEsbuildPlugin,
-  SizeLimitPlugin,
-} from '@size-limit/esbuild'

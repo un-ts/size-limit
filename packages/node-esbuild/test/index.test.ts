@@ -3,10 +3,10 @@ import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 
+import type { SizeLimitCheck, SizeLimitConfig } from '@size-limit/esbuild'
 import { describe, expect, it } from 'vitest'
 
 import nodeEsbuild from 'size-limit-node-esbuild'
-import type { SizeLimitCheck, SizeLimitConfig } from 'size-limit-node-esbuild'
 
 const [plugin] = nodeEsbuild
 

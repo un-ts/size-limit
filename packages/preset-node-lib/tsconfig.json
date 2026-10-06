@@ -7,7 +7,7 @@
     "outDir": "lib",
     "types": ["node"]
   },
-  "include": ["src"],
+  "include": ["src", "../node-esbuild/shim.d.ts"],
   "references": [
     {
       "path": "../node-esbuild"
