@@ -41,8 +41,8 @@ describe('size-limit-preset-node-lib', () => {
       await writeFile(entry, 'export const value = 1\n')
       const config = createConfig()
       const check = { files: [entry] } as SizeLimitCheck
-      await nodeEsbuild.step20?.(config, check)
-      await nodeEsbuild.step40?.(config, check)
+      await nodeEsbuild.step20(config, check)
+      await nodeEsbuild.step40(config, check)
       await file.step60(config, check)
       expect(check.bundles).toHaveLength(1)
       expect(check.size).toBeGreaterThan(0)

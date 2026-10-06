@@ -1,8 +1,6 @@
 import file from '@size-limit/file'
-import nodeEsbuild, {
-  type SizeLimitEsbuildPlugin,
-} from 'size-limit-node-esbuild'
+import nodeEsbuild, { type SizeLimitPlugin } from 'size-limit-node-esbuild'
 
-const preset: readonly SizeLimitEsbuildPlugin[] = [...nodeEsbuild, ...file]
+const preset: readonly SizeLimitPlugin[] = [...nodeEsbuild, ...file]
 
 export default preset

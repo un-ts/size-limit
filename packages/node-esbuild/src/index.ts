@@ -2,6 +2,8 @@ import esbuildPlugin from '@size-limit/esbuild'
 
 import type { SizeLimitEsbuildPlugin } from './types.js'
 
+// `@size-limit/esbuild` ships no declarations, and the ambient module below is
+// not always visible to typescript-eslint's project service, so assert it here.
 const base = (esbuildPlugin as readonly [SizeLimitEsbuildPlugin])[0]
 
 const plugin: SizeLimitEsbuildPlugin = {
@@ -9,7 +11,7 @@ const plugin: SizeLimitEsbuildPlugin = {
   name: 'size-limit-esbuild',
 
   async step20(config, check) {
-    await base.step20?.(config, check)
+    await base.step20(config, check)
     const esbuildConfig = check.esbuildConfig
     if (esbuildConfig) {
       if (!esbuildConfig.platform) {
@@ -29,4 +31,5 @@ export type {
   SizeLimitCheck,
   SizeLimitConfig,
   SizeLimitEsbuildPlugin,
+  SizeLimitPlugin,
 } from './types.js'

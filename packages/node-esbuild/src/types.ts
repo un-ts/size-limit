@@ -18,12 +18,19 @@ export interface SizeLimitCheck extends Omit<Check, 'modifyEsbuildConfig'> {
   modifyEsbuildConfig?(config: BuildOptions): BuildOptions
 }
 
-export interface SizeLimitEsbuildPlugin {
+export interface SizeLimitPlugin {
   name: string
   wait40?: string
   before?(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
   finally?(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
   step20?(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
   step40?(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
+  step60?(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
   step61?(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
+}
+
+export interface SizeLimitEsbuildPlugin extends SizeLimitPlugin {
+  step20(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
+  step40(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
+  step61(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
 }
