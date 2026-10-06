@@ -1,5 +1,5 @@
 import { existsSync } from 'node:fs'
-import { mkdtemp, rm, writeFile } from 'node:fs/promises'
+import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 
@@ -37,6 +37,52 @@ describe('size-limit-node-esbuild', () => {
     const check = createCheck(['entry.js'])
     await plugin.step20(createConfig(), check)
     expect(check.esbuildConfig?.packages).toBe('external')
+  })
+
+  it('bundles relative imports but not package imports', async () => {
+    const dir = await mkdtemp(path.join(tmpdir(), 'size-limit-node-esbuild-'))
+    try {
+      const entry = path.join(dir, 'entry.js')
+      await writeFile(
+        entry,
+        "import { value } from './dep.js'\nimport pad from 'lodash/pad'\nexport default value + pad\n",
+      )
+      await writeFile(path.join(dir, 'dep.js'), 'export const value = 42\n')
+      const check = createCheck([entry])
+      const config = createConfig()
+      await plugin.step20(config, check)
+      await plugin.step40(config, check)
+      const [bundle] = check.bundles ?? []
+      const js = await readFile(bundle, 'utf8')
+      expect(js).toContain('42')
+      expect(js).toContain('lodash/pad')
+    } finally {
+      await rm(dir, { force: true, recursive: true })
+    }
+  })
+
+  it('externalises relative imports listed in ignore', async () => {
+    const dir = await mkdtemp(path.join(tmpdir(), 'size-limit-node-esbuild-'))
+    try {
+      const entry = path.join(dir, 'entry.js')
+      await writeFile(
+        entry,
+        "import { value } from './dep.js'\nexport default value\n",
+      )
+      await writeFile(path.join(dir, 'dep.js'), 'export const value = 42\n')
+      const check = createCheck([entry])
+      check.ignore = ['lodash', './dep.js']
+      const config = createConfig()
+      await plugin.step20(config, check)
+      await plugin.step40(config, check)
+      expect(check.esbuildConfig?.external).toEqual(['lodash', './dep.js'])
+      const [bundle] = check.bundles ?? []
+      const js = await readFile(bundle, 'utf8')
+      expect(js).not.toContain('42')
+      expect(js).toContain('./dep.js')
+    } finally {
+      await rm(dir, { force: true, recursive: true })
+    }
   })
 
   it('keeps a platform chosen by modifyEsbuildConfig', async () => {
