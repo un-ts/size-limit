@@ -6,7 +6,8 @@
     "target": "ES2019",
     "types": ["node", "web", "mdx", "vite/client"],
     "paths": {
-      "size-limit-node-esbuild": ["./packages/node-esbuild/src/index.ts"]
+      "size-limit-node-esbuild": ["./packages/node-esbuild/src/index.ts"],
+      "size-limit-preset-node-lib": ["./packages/preset-node-lib/src/index.ts"]
     }
   },
   "references": [
