@@ -18,8 +18,7 @@
     "default": "./lib/index.js"
   },
   "files": [
-    "lib",
-    "shim.d.ts"
+    "lib"
   ],
   "peerDependencies": {
     "size-limit": "^14.0.0"
