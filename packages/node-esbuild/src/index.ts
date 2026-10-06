@@ -64,8 +64,7 @@ export default [
       )
       if (check.config) {
         const esbuildConfig = (await import(check.config)) as
-          | BuildOptions
-          | { default?: BuildOptions }
+          BuildOptions | { default?: BuildOptions }
         setPlatformNode(
           // eslint-disable-next-line sonarjs/no-nested-assignment
           (check.esbuildConfig = {
