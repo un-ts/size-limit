@@ -1,5 +1,7 @@
 declare module '@size-limit/file' {
-  const plugins: readonly [import('size-limit-node-esbuild').SizeLimitPlugin]
+  import type { SizeLimitPlugin } from 'size-limit-node-esbuild'
+
+  const plugins: readonly [SizeLimitPlugin]
 
   export default plugins
 }
