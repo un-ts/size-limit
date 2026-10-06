@@ -18,7 +18,8 @@
     "default": "./lib/index.js"
   },
   "files": [
-    "lib"
+    "lib",
+    "shim.d.ts"
   ],
   "dependencies": {
     "@size-limit/esbuild": "^14.1.0",
