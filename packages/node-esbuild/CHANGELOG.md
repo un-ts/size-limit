@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.5.0
+
+### Minor Changes
+
+- [#58](https://github.com/un-ts/size-limit/pull/58) [`26e7cdf`](https://github.com/un-ts/size-limit/commit/26e7cdf73e95056ba7a2564e2fe112e97fdd4bfa) Thanks [@JounQin](https://github.com/JounQin)! - Delegate bundling to `@size-limit/esbuild` so the esbuild steps actually run, and report the plugin as `size-limit-esbuild` so `size-limit` recognises it as the esbuild plugin. The plugin now defaults `esbuildConfig.platform` to `node`, externalises package imports (`packages: 'external'`), and declares `size-limit` as a peer dependency to match `@size-limit/esbuild`.
+
 ## 0.4.0
 
 ### Minor Changes
