@@ -14612,8 +14612,9 @@ __metadata:
   resolution: "size-limit-node-esbuild@workspace:packages/node-esbuild"
   dependencies:
     "@size-limit/esbuild": "npm:^14.1.0"
-    size-limit: "npm:^14.1.0"
     tslib: "npm:^2.8.1"
+  peerDependencies:
+    size-limit: ^14.0.0
   languageName: unknown
   linkType: soft
 

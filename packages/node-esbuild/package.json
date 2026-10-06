@@ -21,9 +21,11 @@
     "lib",
     "shim.d.ts"
   ],
+  "peerDependencies": {
+    "size-limit": "^14.0.0"
+  },
   "dependencies": {
     "@size-limit/esbuild": "^14.1.0",
-    "size-limit": "^14.1.0",
     "tslib": "^2.8.1"
   },
   "publishConfig": {
