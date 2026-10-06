@@ -2,7 +2,7 @@ declare module '@size-limit/esbuild' {
   import type { BuildOptions, Metafile } from 'esbuild'
   import type { Check } from 'size-limit'
 
-  export interface SizeLimitConfig {
+  export interface SizeLimitPluginConfig {
     cleanDir?: boolean
     configPath: string
     saveBundle: string
@@ -22,18 +22,21 @@ declare module '@size-limit/esbuild' {
   export interface SizeLimitPlugin {
     name: string
     wait40?: string
-    before?(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
-    finally?(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
-    step20?(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
-    step40?(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
-    step60?(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
-    step61?(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
+    before?(config: SizeLimitPluginConfig, check: SizeLimitCheck): Promise<void>
+    finally?(
+      config: SizeLimitPluginConfig,
+      check: SizeLimitCheck,
+    ): Promise<void>
+    step20?(config: SizeLimitPluginConfig, check: SizeLimitCheck): Promise<void>
+    step40?(config: SizeLimitPluginConfig, check: SizeLimitCheck): Promise<void>
+    step60?(config: SizeLimitPluginConfig, check: SizeLimitCheck): Promise<void>
+    step61?(config: SizeLimitPluginConfig, check: SizeLimitCheck): Promise<void>
   }
 
   export interface SizeLimitEsbuildPlugin extends SizeLimitPlugin {
-    step20(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
-    step40(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
-    step61(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
+    step20(config: SizeLimitPluginConfig, check: SizeLimitCheck): Promise<void>
+    step40(config: SizeLimitPluginConfig, check: SizeLimitCheck): Promise<void>
+    step61(config: SizeLimitPluginConfig, check: SizeLimitCheck): Promise<void>
   }
 
   const plugins: readonly [SizeLimitEsbuildPlugin]

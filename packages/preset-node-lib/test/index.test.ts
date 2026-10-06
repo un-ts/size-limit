@@ -4,7 +4,7 @@ import path from 'node:path'
 
 import type {
   SizeLimitCheck,
-  SizeLimitConfig,
+  SizeLimitPluginConfig,
   SizeLimitEsbuildPlugin,
 } from '@size-limit/esbuild'
 import { describe, expect, it } from 'vitest'
@@ -13,7 +13,7 @@ import preset from 'size-limit-preset-node-lib'
 
 interface SizeLimitFilePlugin {
   name: string
-  step60(config: SizeLimitConfig, check: SizeLimitCheck): Promise<void>
+  step60(config: SizeLimitPluginConfig, check: SizeLimitCheck): Promise<void>
 }
 
 const [nodeEsbuild, file] = preset as unknown as readonly [
@@ -21,7 +21,7 @@ const [nodeEsbuild, file] = preset as unknown as readonly [
   SizeLimitFilePlugin,
 ]
 
-const createConfig = (): SizeLimitConfig => ({
+const createConfig = (): SizeLimitPluginConfig => ({
   configPath: 'package.json',
   saveBundle: '',
 })
