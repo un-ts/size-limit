@@ -65,7 +65,6 @@
     "type-coverage": "^2.30.3",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
     "vite": "^8.3.3",
-    "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^5.0.3",
     "yarn-berry-deduplicate": "^7.0.1"
   },
@@ -85,20 +84,11 @@
   "size-limit": [
     {
       "path": "./packages/node-esbuild/src/index.ts",
-      "limit": "900B",
-      "ignore": [
-        "@size-limit/esbuild",
-        "esbuild",
-        "size-limit"
-      ]
+      "limit": "900B"
     },
     {
       "path": "./packages/preset-node-lib/src/index.ts",
-      "limit": "400B",
-      "ignore": [
-        "@size-limit/file",
-        "size-limit-node-esbuild"
-      ]
+      "limit": "400B"
     }
   ],
   "stylelint": {

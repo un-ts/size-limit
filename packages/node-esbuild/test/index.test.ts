@@ -30,6 +30,12 @@ describe('size-limit-node-esbuild', () => {
     expect(check.esbuildOutfile).toMatch(/size-limit-/)
   })
 
+  it('externalises package imports', async () => {
+    const check = createCheck(['entry.js'])
+    await plugin.step20?.(createConfig(), check)
+    expect(check.esbuildConfig?.packages).toBe('external')
+  })
+
   it('keeps a platform chosen by modifyEsbuildConfig', async () => {
     const check = createCheck(['entry.js'])
     check.modifyEsbuildConfig = config => ({ ...config, platform: 'neutral' })

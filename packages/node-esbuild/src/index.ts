@@ -11,8 +11,14 @@ const plugin: SizeLimitEsbuildPlugin = {
   async step20(config, check) {
     await base.step20?.(config, check)
     const esbuildConfig = check.esbuildConfig
-    if (esbuildConfig && !esbuildConfig.platform) {
-      esbuildConfig.platform = 'node'
+    if (esbuildConfig) {
+      if (!esbuildConfig.platform) {
+        esbuildConfig.platform = 'node'
+      }
+      // Node libraries ship their dependencies, so only measure the package code
+      if (!esbuildConfig.packages) {
+        esbuildConfig.packages = 'external'
+      }
     }
   },
 }
