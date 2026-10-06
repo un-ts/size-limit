@@ -1,4 +1,4 @@
-/// <reference path="../shim.d.ts" />
+/// <reference path="../shim.d.ts" preserve="true" />
 
 import esbuildPlugin, { type SizeLimitEsbuildPlugin } from '@size-limit/esbuild'
 
