@@ -4,6 +4,12 @@
     "composite": true,
     "module": "Node16",
     "rootDir": "src",
-    "outDir": "lib"
-  }
+    "outDir": "lib",
+    "types": ["node"]
+  },
+  "references": [
+    {
+      "path": "../node-esbuild"
+    }
+  ]
 }

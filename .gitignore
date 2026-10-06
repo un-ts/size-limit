@@ -4,7 +4,8 @@
 !.yarn/releases
 !.yarn/plugins
 .type-coverage
-.vercel
+.wrangler
 coverage
+dist
 lib
 node_modules

@@ -40,6 +40,7 @@
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
     "@types/web": "^0.0.358",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "@vitejs/plugin-react-swc": "^4.0.0",
     "eslint": "^10.0.0",
     "github-markdown-css": "^5.8.1",
@@ -59,7 +60,7 @@
     "size-limit-preset-node-lib": "link:packages/preset-node-lib",
     "stylelint": "^17.0.0",
     "type-coverage": "^2.29.7",
-    "typescript": "^7.0.0",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
     "vite": "^6.3.5",
     "yarn-berry-deduplicate": "^7.0.0"
   },
@@ -90,18 +91,7 @@
     }
   ],
   "stylelint": {
-    "extends": "@1stg/stylelint-config",
-    "overrides": [
-      {
-        "files": [
-          "*.scss"
-        ],
-        "rules": {
-          "scss/at-import-no-partial-leading-underscore": null,
-          "scss/load-no-partial-leading-underscore": true
-        }
-      }
-    ]
+    "extends": "@1stg/stylelint-config"
   },
   "typeCoverage": {
     "atLeast": 100,
