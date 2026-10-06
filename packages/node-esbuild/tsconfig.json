@@ -7,5 +7,5 @@
     "outDir": "lib",
     "types": ["node"]
   },
-  "include": ["src", "shim.d.ts"]
+  "include": ["src"]
 }
