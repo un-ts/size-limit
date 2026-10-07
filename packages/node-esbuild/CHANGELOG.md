@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.5.1
+
+### Patch Changes
+
+- [#61](https://github.com/un-ts/size-limit/pull/61) [`84ee212`](https://github.com/un-ts/size-limit/commit/84ee21210a6f293cce59c7fc6338a09a4ad6180c) Thanks [@JounQin](https://github.com/JounQin)! - Use the plugin types from `size-limit` instead of the local shims. `size-limit` 14.2.0 ships `Plugin`, `PluginConfig` and `PluginCheck`, so `size-limit-node-esbuild` re-exports those instead of declaring its own `SizeLimit*` types, and `step20` becomes optional as in the official plugin API.
+
 ## 0.5.0
 
 ### Minor Changes
