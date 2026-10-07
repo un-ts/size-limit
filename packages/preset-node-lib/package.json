@@ -21,10 +21,10 @@
     "lib"
   ],
   "peerDependencies": {
-    "size-limit": "^14.0.0"
+    "size-limit": "^14.2.0"
   },
   "dependencies": {
-    "@size-limit/file": "^14.1.0",
+    "@size-limit/file": "^14.2.0",
     "size-limit-node-esbuild": "^0.5.0",
     "tslib": "^2.8.1"
   },

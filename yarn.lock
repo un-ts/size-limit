@@ -4606,23 +4606,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@size-limit/esbuild@npm:^14.1.0":
-  version: 14.1.0
-  resolution: "@size-limit/esbuild@npm:14.1.0"
+"@size-limit/esbuild@npm:^14.2.0":
+  version: 14.2.0
+  resolution: "@size-limit/esbuild@npm:14.2.0"
   dependencies:
     esbuild: "npm:^0.28.2"
   peerDependencies:
-    size-limit: 14.1.0
-  checksum: 10c0/babce39e6a46929f385a4d011ae1cc0fc34ba86a07f987b46b51f0d826ab18b4a00d368d21257967c7956ccc1ab17fd31770c797a56f4b9036a926a37679824c
+    size-limit: 14.2.0
+  checksum: 10c0/1f75bbad0419c50d382edf07ad59fb9347bcb1be691a7b2ae45757434258822460075f5c056f37126680985ccf3adad519d25bd843f9cb5c3c022cf12ae78a7b
   languageName: node
   linkType: hard
 
-"@size-limit/file@npm:^14.1.0":
-  version: 14.1.0
-  resolution: "@size-limit/file@npm:14.1.0"
+"@size-limit/file@npm:^14.2.0":
+  version: 14.2.0
+  resolution: "@size-limit/file@npm:14.2.0"
   peerDependencies:
-    size-limit: 14.1.0
-  checksum: 10c0/efdb8723626b0f6223ff45b8151fb21860733f5c7fbd2f766e5c06b1756995df4991d087731bfbbb0f04f3f77b576a2948f9bf351fe60601a59d5996bc271864
+    size-limit: 14.2.0
+  checksum: 10c0/4071968d9cc3f6ef062c88babbf4fc1603aa20aa4e4bf7678ca72bf364a80446c44fbebd218c61f17df6c414773511f7ded2fcd157e056012b0651d6fd771741
   languageName: node
   linkType: hard
 
@@ -5596,7 +5596,7 @@ __metadata:
     sass: "npm:^1.105.1"
     simple-git-hooks: "npm:^2.14.0"
     sirv-cli: "npm:^3.0.1"
-    size-limit: "npm:^14.1.0"
+    size-limit: "npm:^14.2.0"
     size-limit-node-esbuild: "link:packages/node-esbuild"
     size-limit-preset-node-lib: "link:packages/preset-node-lib"
     stylelint: "npm:^17.16.0"
@@ -14611,10 +14611,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "size-limit-node-esbuild@workspace:packages/node-esbuild"
   dependencies:
-    "@size-limit/esbuild": "npm:^14.1.0"
+    "@size-limit/esbuild": "npm:^14.2.0"
     tslib: "npm:^2.8.1"
   peerDependencies:
-    size-limit: ^14.0.0
+    size-limit: ^14.2.0
   languageName: unknown
   linkType: soft
 
@@ -14628,23 +14628,23 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "size-limit-preset-node-lib@workspace:packages/preset-node-lib"
   dependencies:
-    "@size-limit/file": "npm:^14.1.0"
+    "@size-limit/file": "npm:^14.2.0"
     size-limit-node-esbuild: "npm:^0.5.0"
     tslib: "npm:^2.8.1"
   peerDependencies:
-    size-limit: ^14.0.0
+    size-limit: ^14.2.0
   languageName: unknown
   linkType: soft
 
-"size-limit@npm:^14.1.0":
-  version: 14.1.0
-  resolution: "size-limit@npm:14.1.0"
+"size-limit@npm:^14.2.0":
+  version: 14.2.0
+  resolution: "size-limit@npm:14.2.0"
   dependencies:
     lilconfig: "npm:^3.1.3"
     nanospinner: "npm:^1.2.2"
   bin:
     size-limit: bin.js
-  checksum: 10c0/013aca9d61e6b825898bb31df03c558fb251ef745913a3ab6545f34506d0c1bb9b6b2b83f7ead89306722133bde39fb287dc1b670d5bb0dfcbc49cdbe6f96e5c
+  checksum: 10c0/b1bbef96e2d5b7e28407d07b376d75adc1815eda9d763173f07b984b5a1e4d5fafd8ec73918945ae19a41e2f3f03bfcf1980a27624701f9e70aefdd181be552b
   languageName: node
   linkType: hard
 
