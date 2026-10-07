@@ -18,14 +18,13 @@
     "default": "./lib/index.js"
   },
   "files": [
-    "lib",
-    "shim.d.ts"
+    "lib"
   ],
   "peerDependencies": {
-    "size-limit": "^14.0.0"
+    "size-limit": "^14.2.0"
   },
   "dependencies": {
-    "@size-limit/esbuild": "^14.1.0",
+    "@size-limit/esbuild": "^14.2.0",
     "tslib": "^2.8.1"
   },
   "publishConfig": {

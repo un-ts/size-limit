@@ -3,23 +3,28 @@ import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 
+import type { Plugin, PluginCheck, PluginConfig } from 'size-limit'
 import { describe, expect, it } from 'vitest'
 
-import type {
-  SizeLimitCheck,
-  SizeLimitPluginConfig,
-} from 'size-limit-node-esbuild'
 import nodeEsbuild from 'size-limit-node-esbuild'
 
-const [plugin] = nodeEsbuild
+type Step = (config: PluginConfig, check: PluginCheck) => Promise<void>
 
-const createConfig = (saveBundle = ''): SizeLimitPluginConfig => ({
+// The hooks this package implements are always there, so the tests can call them.
+interface NodeEsbuildPlugin extends Plugin {
+  step20: Step
+  step40: Step
+}
+
+const [plugin] = nodeEsbuild as unknown as readonly [NodeEsbuildPlugin]
+
+const createConfig = (saveBundle = ''): PluginConfig => ({
+  checks: [],
   configPath: 'package.json',
   saveBundle,
 })
 
-const createCheck = (files: string[]): SizeLimitCheck =>
-  ({ files }) as SizeLimitCheck
+const createCheck = (files: string[]): PluginCheck => ({ files })
 
 describe('size-limit-node-esbuild', () => {
   it('is recognised by size-limit as the esbuild plugin', () => {
@@ -87,7 +92,10 @@ describe('size-limit-node-esbuild', () => {
 
   it('keeps a platform chosen by modifyEsbuildConfig', async () => {
     const check = createCheck(['entry.js'])
-    check.modifyEsbuildConfig = config => ({ ...config, platform: 'neutral' })
+    check.modifyEsbuildConfig = <T extends object>(config?: T) => ({
+      ...config,
+      platform: 'neutral',
+    })
     await plugin.step20(createConfig(), check)
     expect(check.esbuildConfig?.platform).toBe('neutral')
   })
