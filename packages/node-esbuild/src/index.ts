@@ -1,15 +1,14 @@
-/// <reference path="../shim.d.ts" preserve="true" />
-
-import esbuildPlugin, { type SizeLimitEsbuildPlugin } from '@size-limit/esbuild'
+import esbuildPlugin from '@size-limit/esbuild'
+import type { Plugin } from 'size-limit'
 
 const base = esbuildPlugin[0]
 
-const plugin: SizeLimitEsbuildPlugin = {
+const plugin: Plugin = {
   ...base,
   name: 'size-limit-esbuild',
 
   async step20(config, check) {
-    await base.step20(config, check)
+    await base.step20?.(config, check)
     const esbuildConfig = check.esbuildConfig
     if (esbuildConfig) {
       if (!esbuildConfig.platform) {
@@ -25,9 +24,4 @@ const plugin: SizeLimitEsbuildPlugin = {
 
 export default [plugin] as const
 
-export type {
-  SizeLimitCheck,
-  SizeLimitEsbuildPlugin,
-  SizeLimitPlugin,
-  SizeLimitPluginConfig,
-} from '@size-limit/esbuild'
+export type { Plugin, PluginCheck, PluginConfig } from 'size-limit'

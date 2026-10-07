@@ -2,26 +2,30 @@ import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 
-import type {
-  SizeLimitCheck,
-  SizeLimitPluginConfig,
-  SizeLimitEsbuildPlugin,
-} from 'size-limit-node-esbuild'
+import type { Plugin, PluginCheck, PluginConfig } from 'size-limit'
 import { describe, expect, it } from 'vitest'
 
 import preset from 'size-limit-preset-node-lib'
 
-interface SizeLimitFilePlugin {
-  name: string
-  step60(config: SizeLimitPluginConfig, check: SizeLimitCheck): Promise<void>
+type Step = (config: PluginConfig, check: PluginCheck) => Promise<void>
+
+// The hooks the plugins in this preset implement are always there.
+interface NodeEsbuildPlugin extends Plugin {
+  step20: Step
+  step40: Step
+}
+
+interface FilePlugin extends Plugin {
+  step60: Step
 }
 
 const [nodeEsbuild, file] = preset as unknown as readonly [
-  SizeLimitEsbuildPlugin,
-  SizeLimitFilePlugin,
+  NodeEsbuildPlugin,
+  FilePlugin,
 ]
 
-const createConfig = (): SizeLimitPluginConfig => ({
+const createConfig = (): PluginConfig => ({
+  checks: [],
   configPath: 'package.json',
   saveBundle: '',
 })
@@ -40,7 +44,7 @@ describe('size-limit-preset-node-lib', () => {
       const entry = path.join(dir, 'entry.js')
       await writeFile(entry, 'export const value = 1\n')
       const config = createConfig()
-      const check = { files: [entry] } as SizeLimitCheck
+      const check: PluginCheck = { files: [entry] }
       await nodeEsbuild.step20(config, check)
       await nodeEsbuild.step40(config, check)
       await file.step60(config, check)
