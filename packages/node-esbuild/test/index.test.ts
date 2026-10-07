@@ -92,8 +92,10 @@ describe('size-limit-node-esbuild', () => {
 
   it('keeps a platform chosen by modifyEsbuildConfig', async () => {
     const check = createCheck(['entry.js'])
-    check.modifyEsbuildConfig = <T extends object>(config?: T) =>
-      ({ ...config, platform: 'neutral' }) as T
+    check.modifyEsbuildConfig = <T extends object>(config?: T) => ({
+      ...config,
+      platform: 'neutral',
+    })
     await plugin.step20(createConfig(), check)
     expect(check.esbuildConfig?.platform).toBe('neutral')
   })
